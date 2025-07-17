@@ -22,9 +22,11 @@ The visualization tool helps understand the fundamental differences between:
 
 ## Generated Visualizations
 
-The script produces two high-quality PNG files:
+The package includes two main scripts that produce four high-quality PNG files:
 
-### 1. `cfdem_ib_vs_ibm_comparison.png`
+### Main Visualization Script (`cfdem_ib_visualization.py`)
+
+#### 1. `cfdem_ib_vs_ibm_comparison.png`
 Comprehensive comparison including:
 - 2D contour plots showing void fraction fields
 - 3D surface plots demonstrating boundary sharpness
@@ -33,12 +35,28 @@ Comprehensive comparison including:
 - Interpolation kernel function comparison
 - Grid cell intersection illustration
 
-### 2. `cfdem_ib_kernel_comparison.png`
+#### 2. `cfdem_ib_kernel_comparison.png`
 Detailed kernel function analysis featuring:
 - Sharp vs smooth kernel functions
 - Multiple IBM smoothing parameters
 - Gradient analysis showing transition sharpness
 - Influence zone visualization
+
+### Advanced Analysis Script (`advanced_analysis.py`)
+
+#### 3. `cfdem_ib_mathematical_analysis.png`
+Mathematical formulation comparison including:
+- Side-by-side mathematical equations
+- Convergence analysis and error behavior
+- Computational cost scaling comparison
+- Numerical accuracy assessments
+
+#### 4. `cfdem_ib_geometric_analysis.png`
+Detailed geometric intersection analysis featuring:
+- Step-by-step geometric calculations
+- Lambda parameter visualization
+- Grid convergence studies
+- Error analysis and computational efficiency
 
 ## Requirements
 
@@ -53,15 +71,22 @@ Detailed kernel function analysis featuring:
    pip install matplotlib numpy
    ```
 
-2. **Run the visualization script**:
+2. **Run the main visualization script**:
    ```bash
    cd applications/utilities/cfdemIBVisualization
    python3 cfdem_ib_visualization.py
    ```
 
-3. **Output files** will be generated in the same directory:
-   - `cfdem_ib_vs_ibm_comparison.png`
-   - `cfdem_ib_kernel_comparison.png`
+3. **Run the advanced analysis script**:
+   ```bash
+   python3 advanced_analysis.py
+   ```
+
+4. **Output files** will be generated in the same directory:
+   - `cfdem_ib_vs_ibm_comparison.png` (main comparison)
+   - `cfdem_ib_kernel_comparison.png` (kernel analysis)
+   - `cfdem_ib_mathematical_analysis.png` (mathematical formulations)
+   - `cfdem_ib_geometric_analysis.png` (geometric calculations)
 
 ## Technical Implementation
 
